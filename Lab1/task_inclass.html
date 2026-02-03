@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        #navbar {
+            background-color: #9b2828;
+            padding: 10px;
+            text-align: center;
+            width: 98%;
+        }
+
+        nav a {
+            color: rgb(26, 19, 19);
+            text-decoration: none;
+            margin: 4%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .logo { 
+            font-size: 20px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        #hero {
+            height: 80vh;
+            background-color: aqua;
+            text-align: center;
+            text-align-last: center;
+            text-shadow: black;
+            text-emphasis-color: white;
+            margin-top: 20px;
+        }
+        #emptext {
+            font-size: 80px;
+        }
+        .btn {
+            padding: 10px;
+        }
+        .btn:hover {
+            color: aquamarine;
+            font-size: 20px;
+        }
+        img {
+            box-shadow: 2px;
+        }
+        img:hover {
+            transition: all;
+            transform: translateY(-10px);
+            box-shadow: 12px;
+        }
+        .price {
+            color: green;
+            padding: 10px;
+        }
+    </style>
+</head>
+<html>
+    <nav id = "navbar">
+        <span class = "logo"> Wanderlust </span>
+        <a href = "#Destinations"> Destinations </a>
+        <a href = "#Tours"> Tours </a>
+        <a href = "#Reviews"> Reviews </a>
+        <a href = "#About_Us"> Aboout Us </a>
+        <a href = "#Book_Now"> Book Now </a>
+    </nav>
+    <section id = "hero">
+        <table style="width: 100%;">
+            <tr>
+                <td>
+                   <button class = "btn btn-primary">View Destinations</button>
+
+                </td>
+                <td>
+                    <h1 id = "emptext"> Explore The World With Us</h1>
+                    <p> Unforgettable adventures, breathtaking destinations, memories that last forever </p>
+
+                </td>
+                <td>
+                    <button class = "btn btn-secondary">Plan Your Trip</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id = "Destinations" class = "Section">
+        <h1> Popular Destinations </h1>
+        <br> <br>
+        <p>
+            Discover out most loved travel spots
+        </p>
+<table style="width: 90%;">
+<tr> <td>
+        <img src="typeshii.jpg" width="180px">
+        <h3> Almaty, Kazakhstan </h3>
+        <p> This city is very cool and mysterious </p>
+        <span class = "price">Starting from $599</span>
+     </td>
+        
+     <td>
+        <img src="typeshii.jpg" width="180px">
+        <h3> Bali, Indonesia</h3>
+        <p> This city is very popular and warm </p>
+        <span class = "price">Starting from $899</span>
+     </td>
+
+     <td> 
+        <img src="typeshii.jpg" width="180px" style ="margin-bottom: 0px;">
+        <h3 style = "margin-top: 0px"> Swiss Alps, Switzerland </h3>
+        <p> This city has skiing mountainss and businessmen </p>
+        <span class = "price">Starting from $1299</span>
+     </td>
+
+     <td>
+        <img src="typeshii.jpg" width="180px">
+        <h3> Tokyo, Japan </h3>
+        <p> This city is beautiful and welcoming </p>
+        <span class = "price">Starting from $1099</span>
+     </td>
+</tr>
+</table>
+    </section>
+
+</html>
