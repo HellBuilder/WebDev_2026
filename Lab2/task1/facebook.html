@@ -8,6 +8,62 @@
                 display: flex;
                 gap: 10px;
             }
+            input {
+                width: 90%;
+                padding: 16px;
+                margin-top: 30px;
+                margin-bottom: 5px;
+                margin-left: 10px;
+                margin-right: 10px;
+                font-size: 16px;
+            }   
+
+            .login-btn {
+                background-color: #1877f2;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .login-btn:hover {
+                background-color: #166fe5;
+            }
+
+            .forgot {
+                display: block;
+                margin-top: 15px;
+                color: #1877f2;
+                text-decoration: none;
+                font-size: 14px;
+            }
+
+            .forgot:hover {
+                text-decoration: underline;
+            }
+
+            .divider {
+                margin: 25px 0;
+                border: none;
+                height: 1px;
+                background-color: #ddd;
+            }
+
+            .create-btn {
+                background-color: #42b72a;
+                color: white;
+                border: none;
+                padding: 14px 20px;
+                font-size: 16px;
+                border-radius: 6px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .create-btn:hover {
+                background-color: #36a420;
+            }
 
 
 
@@ -25,10 +81,34 @@
 
             <h2 style="color: black; font-family: sans-serif; font-size: 26px;"> Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми </h2>
         </div>
-        <div style="width:30%; float:left; height:100%;" type = "container">
-            <form style="margin-top: 30%; background-color: white; border-radius: 30%;">
-                <input type="text" id="mail" style="margin: 3px; width: 90%;" placeholder="Электронный адрес или номер телефона">
+        <div style="width: 5%; float: left; height: 100%;" type = "container">
+            <br>
+        </div>
+        <div style="width:30%; float:left; height:100%;">
+            <form style="
+                margin-top: 40%;
+                background-color: white;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+            ">
+            <input type="text" id="mail" placeholder="Электронный адрес или номер телефона">
+
+            <input type="password" id="pass" placeholder="Пароль">
+
+            <input type="submit" value="Вход" class="login-btn">
+
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="forgot">
+                Забыли пароль?
+            </a>
+
+            <hr class="divider">
+
+            <button type="button" class="create-btn">
+                Создать новый аккаунт
+            </button>
             </form>
         </div>
+
     </body>
 </html>
