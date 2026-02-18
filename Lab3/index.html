@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            body {
+                background: whitesmoke;
+                flex: 1;
+            }
+            .color-btn {
+                padding: 16px;
+                border: 1px solid black;
+                border-radius: 4px;
+                cursor: pointer;
+                float: left;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <main>
+                <p> Current color </p>
+                <span id = "color-code"></span>
+                <div class = "color-buttns">
+                    <input type = "button" class = "color-btn" data-color = "#E74C3C" value="Red">
+                    <input type = "button" class = "color-btn" data-color = "#2ECC71" value="Green">
+                    <input type = "button" class = "color-btn" data-color = "#3498DB" value="Blue">
+                    <input type = "button" class = "color-btn" data-color = "#9B59B6" value="Purple">
+                    <input type = "button" class = "color-btn" data-color = "#E67E22" value="Orange">
+                </div>
+                <input type = "button" id = "random-btn" data-color = "#">
+                <input type = "button" id = "reset-btn" data-color = "#">
+            </main>
+        </header>
+
+        <script>
+            let ColorButton = document.getElementById("color-button");
+            let FileBody = document.body
+            let RandomButton = document.getElementById("random-btn");
+            let ResetButton = document.getElementById("reset-btn");
+
+            ColorButton.addEventListener("click", function()  {
+                FileBody.style.background = ColorButton.value;
+            });
+        </script>
+    </body>
+</html>
