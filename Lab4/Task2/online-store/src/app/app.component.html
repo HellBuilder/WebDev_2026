@@ -1,0 +1,18 @@
+<h2>Select a category</h2>
+
+<button
+  *ngFor="let cat of categories"
+  (click)="selectCategory(cat.id)">
+  {{ cat.name }}
+</button>
+
+<hr>
+
+<p @if "!selectedCategoryId">
+  Please select a category.
+</p>
+
+<app-product-list
+  @if ="selectedCategoryId"
+  [products]="selectedProducts">
+</app-product-list>
