@@ -1,0 +1,21 @@
+<article class="product-card">
+  <img class="product-image" [src]="product.image" [alt]="product.name" />
+  <div class="product-body">
+    <h3>{{ product.name }}</h3>
+    <p class="description">{{ product.description }}</p>
+    <p class="price">{{ product.price | number:'1.0-0' }} KZT</p>
+    <div class="rating-row">
+      <span class="stars" aria-label="Product rating">{{ ratingStars }}</span>
+      <span class="rating-badge">{{ product.rating }}/5</span>
+    </div>
+    <p class="likes">Likes: {{ product.likes }}</p>
+
+    <div class="actions">
+      <button type="button" (click)="onLike()">Like</button>
+      <button type="button" (click)="onDelete()">Delete</button>
+      <button type="button" (click)="onShare('whatsapp')">Share WhatsApp</button>
+      <button type="button" (click)="onShare('telegram')">Share Telegram</button>
+    </div>
+  </div>
+</article>
+

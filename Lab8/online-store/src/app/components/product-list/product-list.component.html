@@ -1,0 +1,15 @@
+@if (products.length === 0) {
+  <p class="empty">No products for this category.</p>
+} @else {
+  <section class="product-grid">
+    @for (product of products; track product.id) {
+      <app-product-item
+        [product]="product"
+        (like)="onLike($event)"
+        (delete)="onDelete($event)"
+        (share)="onShare($event)"
+      />
+    }
+  </section>
+}
+
