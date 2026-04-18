@@ -37,7 +37,7 @@ export class ProductService {
     return this.requestWithFallback<BackendProduct[]>('/products/').pipe(
       map((items) => items.map((item) => this.mapProduct(item))),
       map((items) => (items.length ? items : this.getDemoProducts())),
-      catchError(() => of(this.readCache<Product[]>('products') ?? this.getDemoProducts()))
+      catchError(() => { const c = this.readCache<Product[]>('products'); return of(c?.length ? c : this.getDemoProducts()); })
     );
   }
 
@@ -45,7 +45,7 @@ export class ProductService {
     return this.requestWithFallback<BackendCategory[]>('/categories/').pipe(
       map((items) => items.map((item) => this.mapCategory(item))),
       map((items) => (items.length ? items : this.getDemoCategories())),
-      catchError(() => of(this.readCache<Category[]>('categories') ?? this.getDemoCategories()))
+      catchError(() => { const c = this.readCache<Category[]>('categories'); return of(c?.length ? c : this.getDemoCategories()); })
     );
   }
 
@@ -55,12 +55,7 @@ export class ProductService {
       map((items) =>
         items.length ? items : this.getDemoProducts().filter((item) => item.categoryId === categoryId)
       ),
-      catchError(() =>
-        of(
-          this.readCache<Product[]>(`products-category-${categoryId}`) ??
-            this.getDemoProducts().filter((item) => item.categoryId === categoryId)
-        )
-      )
+      catchError(() => { const c = this.readCache<Product[]>(`products-category-${categoryId}`); return of(c?.length ? c : this.getDemoProducts().filter((item) => item.categoryId === categoryId)); })
     );
   }
 
